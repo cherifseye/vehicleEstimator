@@ -205,4 +205,18 @@ def final_model(data):
     rmse = np.sqrt(lmse)
     print('RMSE:', rmse)
 
+data = load_data('car details v3.csv')
+data = __duplicates__(data)
+data = __handlemissingValues__(data)
+data = __cleanData__(data)
+
+def prediction(x):
+    tree = DecisionTreeRegressor()
+    tree.fit(datadropping(data), datalabbelling(data))
+    return tree.predict(x)[0]
+
+if __name__ == '__main__':
+    x = [125000, 2, 1, 2, 3, 22, 1300, 87, 5, 6]
+    print(prediction([x]))
+
         
