@@ -1,0 +1,3 @@
+([('modelGui',
+   '/Users/cherifseye/Desktop/Vehicle price/dist/modelGui',
+   'EXECUTABLE')],)
